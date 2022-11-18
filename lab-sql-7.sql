@@ -36,10 +36,10 @@ FROM film
 Group by rating;
 
 -- Query 7 -- 
-SELECT rating, ROUND(AVG(rental_duration)) as AVG
+SELECT rating, ROUND(AVG(length)) as AVG
 FROM film
-WHERE rental_duration >=2
-GROUP BY rating;
+GROUP BY rating
+having avg >= 120;
 
 
 
